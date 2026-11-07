@@ -1,0 +1,67 @@
+{
+  "scopeName": "source.papyrus",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.papyrus",
+          "begin": "/\\*",
+          "end": "\\*/"
+        },
+        {
+          "name": "comment.line.papyrus",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.papyrus",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.papyrus",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.papyrus",
+          "match": "\\b(OUTPUT|MIP|BBOX|GROUP|CHILD|LOD|STATIC_LOD|REGION_MORPH|POINTLIGHT|SPANNING|STATE_SWITCH|TRANSFORM|APPNODE|BILLBOARD|SELFLIGHTING|MODIFY|MESH_GROUP|SCENE|MESH|PORTAL|LINKED_MESH|COPY|NULL|EMPTY_MESH)\\b"
+        },
+        {
+          "name": "keyword.other.papyrus",
+          "match": "\\b(MIN|MAX|POS|DESTINATION|REGIONS|COLOR|GLOW|NESTED|VAR|PERIOD|NAME|ROT|TYPE|AXIS|DIFFUSE|SPECULAR|AMBIENT|TEXTURE|BASE_TEXTURE|LIGHT_MAP|SHININESS_MAP|ENVIROMENT_MAP|ENVIRONMENT_MAP|LINK|USEPIVOTS|RENAME_MAT|ADDCHILDREN|FRAME)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.papyrus",
+          "match": "\\b-?\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    }
+  }
+}

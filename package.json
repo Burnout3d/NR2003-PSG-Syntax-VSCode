@@ -1,0 +1,31 @@
+{
+  "name": "papyrus-scene-graph",
+  "displayName": "Papyrus Scene Graph",
+  "description": "Syntax support for Papyrus PSG files",
+  "publisher": "burnout3d",
+  "version": "1.0.0",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Burnout3d/NR2003-PSG-Syntax-VSCode"
+  },
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "papyrus",
+      "aliases": ["Papyrus Scene Graph", "psg"],
+      "extensions": [".psg"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "papyrus",
+      "scopeName": "source.papyrus",
+      "path": "./syntaxes/papyrus.tmLanguage.json"
+    }]
+  }
+}
