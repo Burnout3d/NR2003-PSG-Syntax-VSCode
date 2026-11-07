@@ -1,4 +1,4 @@
-# Payrus Scene Graph Syntax
+# Papyrus Scene Graph Syntax
 
 This extensions adds syntax highlighting for Papyrus Scene Graph (PSG) files to Microsoft's Visual Studio Code.
 
